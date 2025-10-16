@@ -106,17 +106,28 @@
         }
 
         .hero-title-section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
-            margin-bottom: 24px;
+            margin-bottom: 0;
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .hero-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: var(--text-secondary);
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+            line-height: 1.8;
         }
 
         .subtitle {
@@ -136,18 +147,24 @@
 
         .hero-video-container {
             position: relative;
-            max-width: 700px;
-            margin: 0 auto 40px;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 60px rgba(255, 107, 157, 0.25);
+            box-shadow: 0 20px 80px rgba(255, 107, 157, 0.3);
             animation: fadeInUp 1s ease-out;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 16 / 9;
         }
 
-        .hero-video-container:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 20px 70px rgba(255, 107, 157, 0.35);
+        .hero-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
         }
 
         @keyframes fadeInUp {
@@ -612,14 +629,15 @@
         <div class="hero-content">
             <div class="hero-title-section">
                 <h1>The Cloud AI Content Creator Built for Creators Who Are Done with ComfyUI Headaches</h1>
-                <p class="subtitle">
-                    Stop Fighting with Workflows. Start Creating Content That Converts. If you've spent even five minutes wrestling with ComfyUI installations, custom node conflicts, or GPU memory errors, you already know: self-hosting AI is brilliant in theory and brutal in practice. You wanted to create stunning content for <span class="highlight">Instagram and X (Twitter)</span>. Instead, you're debugging Python dependencies at 2 AM.
-                </p>
             </div>
             
             <div class="hero-video-container">
-                <iframe src="https://www.loom.com/embed/fd28090d220b4657bd2bb164a3f86048?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay" style="width: 100%; height: 100%; border-radius: 20px;"></iframe>
+                <iframe src="https://www.loom.com/embed/fd28090d220b4657bd2bb164a3f86048?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
             </div>
+
+            <p class="hero-text">
+                Stop Fighting with Workflows. Start Creating Content That Converts. If you've spent even five minutes wrestling with ComfyUI installations, custom node conflicts, or GPU memory errors, you already know: self-hosting AI is brilliant in theory and brutal in practice. You wanted to create stunning content for <span class="highlight">Instagram and X (Twitter)</span>. Instead, you're debugging Python dependencies at 2 AM.
+            </p>
             
             <a href="#beta-signup" class="cta-button">
                 <span>Join Beta Waitlist</span>
