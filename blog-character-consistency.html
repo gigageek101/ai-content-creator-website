@@ -92,6 +92,29 @@
             color: var(--text);
         }
 
+        .callout {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin: 10px 0;
+        }
+
         article p {
             margin-bottom: 24px;
             font-size: 1.1rem;
@@ -236,19 +259,34 @@
 
     <div class="container">
         <article>
-            <p>Let me set the scene. It's Saturday afternoon. I've been working on AI character consistency for three months. I've read documentation, watched probably 40 hours of tutorials, joined three different Discord communities, and generated literally thousands of test images.</p>
+            <p>It's Saturday afternoon. I've been working on AI character consistency for <strong>three months</strong>.</p>
 
-            <p>My character still looks completely different in every image. It's not even close. We're not talking subtle variations. We're talking "Is this the same person's sibling?" levels of inconsistency.</p>
+            <div class="callout">
+                <div class="callout-title">📚 My 3-Month Investment</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>📖 Read all the documentation</li>
+                    <li>🎥 Watched 40+ hours of tutorials</li>
+                    <li>💬 Joined 3 Discord communities</li>
+                    <li>🖼️ Generated thousands of test images</li>
+                </ul>
+                <p style="margin: 10px 0 0 0;"><strong>Result:</strong> My character still looks completely different in every image. 😤</p>
+            </div>
 
-            <p>I'm ready to give up. Not just on this particular character, but on the entire idea of using AI for my content strategy. It clearly doesn't work for what I need. Time to go back to traditional photography and accept the costs.</p>
+            <p>Not subtle variations. <strong>"Is this the same person's sibling?"</strong> levels of inconsistency.</p>
 
-            <p>Then a friend sends me an invite to try a cloud platform's beta that supposedly solves character consistency. I'm skeptical. Extremely skeptical. I've heard promises before. But I've also invested three months into this problem, so what's another hour of testing?</p>
+            <p>I'm ready to give up. Time to go back to traditional photography and accept the $84K/year costs.</p>
 
-            <p>Fourteen minutes later, I'm staring at my screen in disbelief. I just generated 30 images of the same character, perfectly consistent across every single one. Different poses, different outfits, different settings. Same face. Same proportions. Same styling. Exactly what I'd been failing to achieve for three months.</p>
+            <p>Then a friend sends me a beta invite for a cloud platform that supposedly solves this. I'm skeptical. <em>Extremely</em> skeptical. But what's another hour?</p>
 
-            <p>I literally said out loud to my empty apartment: "You've got to be kidding me."</p>
+            <p><span class="stat-highlight">⏱️ 14 minutes later...</span></p>
 
-            <h2>What Actually Makes Character Consistency Hard</h2>
+            <p>I'm staring at my screen in disbelief. I just generated <strong>30 images</strong> of the same character. Perfectly consistent. Different poses, outfits, settings. Same face. Same proportions. Same styling.</p>
+
+            <p><strong>Everything I'd been failing to achieve for 3 months.</strong></p>
+
+            <p>I literally said out loud to my empty apartment: <em>"You've got to be kidding me."</em> 🤯</p>
+
+            <h2>🧠 What Actually Makes Character Consistency Hard</h2>
 
             <p>Let me explain the technical problem first, because understanding why this is difficult makes the solution more impressive.</p>
 
@@ -258,49 +296,85 @@
 
             <p>To get true consistency, you need the AI to memorize specific details about your character. Facial proportions, distinctive features, overall appearance. This requires training a custom model on your specific character.</p>
 
-            <p>The traditional way to do this with ComfyUI involves LoRA training. LoRA stands for "Low-Rank Adaptation," which is a technique for fine-tuning models with limited resources. In theory, you can train a LoRA on 15-20 images of your character and get consistent results.</p>
+            <p><strong>The traditional way:</strong> LoRA training with ComfyUI.</p>
 
-            <p>In practice? It's incredibly finicky. You need to:</p>
-            <ul>
-                <li>Carefully curate and prepare your training images (consistent lighting, varied poses, proper cropping)</li>
-                <li>Write captions for each image describing what's shown</li>
-                <li>Configure training parameters (learning rate, steps, batch size, all of which require trial and error)</li>
-                <li>Have enough GPU VRAM to run the training (many consumer GPUs can't handle it)</li>
-                <li>Wait hours for training to complete</li>
-                <li>Test the results and probably retrain multiple times with adjusted parameters</li>
-            </ul>
+            <p>In theory: Train on 15-20 images → Get consistent results ✨</p>
 
-            <p>I failed at this process for three months. My training kept overfitting (memorizing specific poses instead of general features) or underfitting (not capturing enough detail to maintain consistency). The parameters felt arbitrary. Every tutorial gave different recommendations. Nothing worked.</p>
+            <p><strong>In practice?</strong> It's incredibly finicky:</p>
 
-            <h2>The Breaking Point</h2>
+            <div class="callout">
+                <div class="callout-title">⚙️ What LoRA Training Actually Requires</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>🖼️ Carefully curate training images (consistent lighting, varied poses, proper cropping)</li>
+                    <li>✍️ Write captions for each image</li>
+                    <li>🔧 Configure training parameters (learning rate, steps, batch size)</li>
+                    <li>💻 Need massive GPU VRAM (most consumer GPUs fail)</li>
+                    <li>⏰ Wait hours for training</li>
+                    <li>🔄 Test and retrain multiple times</li>
+                </ul>
+            </div>
 
-            <p>By month three, I'd spent approximately $140 on compute credits for training attempts, bought a training dataset tool for $47, and wasted countless weekend hours. My character still didn't work.</p>
+            <p><strong>My 3-month failure:</strong> Training kept overfitting (memorizing poses) or underfitting (no consistency). Parameters felt arbitrary. Every tutorial gave different advice. Nothing worked. 😭</p>
 
-            <p>The images that came closest to consistency were so overfit that I could only use the exact poses from my training set. The moment I asked for a new pose or outfit, the character morphed into someone different again.</p>
+            <h2>💔 The Breaking Point</h2>
 
-            <p>I posted in a Reddit community asking for help. Someone responded: "Character consistency is just hard. It takes months to get good at LoRA training. Keep practicing."</p>
+            <div class="callout">
+                <div class="callout-title">💸 My 3-Month Cost</div>
+                <ul style="margin: 0;">
+                    <li>$140 compute credits</li>
+                    <li>$47 training dataset tool</li>
+                    <li>Countless weekend hours</li>
+                </ul>
+                <p style="margin: 10px 0 0 0;"><strong>Result:</strong> My character <em>still didn't work</em>.</p>
+            </div>
 
-            <p>Months. To learn a technical skill I didn't want to learn in the first place, just so I could eventually maybe create the content I actually wanted to create.</p>
+            <p>The closest I got? So overfit I could only recreate exact training poses. New pose → Different person. 🙃</p>
 
-            <p>That's when I realized I'd been approaching this wrong. I'd fallen into the classic trap of thinking that because a tool is technically powerful, I should learn to use it. But powerful and appropriate for your needs are not the same thing.</p>
+            <p>I posted in a Reddit community asking for help:</p>
+            <p><em>"Character consistency is just hard. It takes months to get good at LoRA training. Keep practicing."</em></p>
 
-            <p>I don't want to become a machine learning engineer. I want to create content for Instagram. Those are fundamentally different goals.</p>
+            <p><strong>Months.</strong> To learn a skill I didn't want, just to eventually create the content I actually needed.</p>
 
-            <h2>What Changed in 14 Minutes</h2>
+            <p>That's when I realized: <strong>I'd fallen into the classic trap.</strong></p>
 
-            <p>The cloud platform my friend recommended had a character training feature. Dead simple interface. Upload 5-10 reference images. Click "train model." Wait.</p>
+            <p>Powerful ≠ Appropriate for your needs.</p>
 
-            <p>I uploaded 8 photos from a recent shoot where I liked how I looked. The platform analyzed them for about 2 minutes. Then it said "training started" and gave me an estimated time: 12 minutes.</p>
+            <p>I don't want to become a machine learning engineer. I want to create content for Instagram. Those are <em>fundamentally different goals</em>. 🎯</p>
 
-            <p>I went and made tea. Came back. Training was complete.</p>
+            <h2>✨ What Changed in 14 Minutes</h2>
 
-            <p>The interface had a simple prompt box. I typed: "woman standing in a coffee shop, casual outfit, smiling." Hit generate. Thirty seconds later, an image appeared.</p>
+            <p>The cloud platform had a character training feature. <strong>Dead simple interface:</strong></p>
 
-            <p>It was me. Not just vaguely similar. Recognizably, definitively me. The facial features matched my reference photos. The proportions were right. The overall look was consistent.</p>
+            <div class="callout">
+                <div class="callout-title">🚀 The New Process</div>
+                <ol style="margin: 10px 0 0 20px;">
+                    <li>📤 Upload 5-10 reference images</li>
+                    <li>🖱️ Click "train model"</li>
+                    <li>⏰ Wait 12 minutes</li>
+                </ol>
+            </div>
 
-            <p>I tried another prompt. "Same woman, different scene: walking in a park, athletic wear, side view." Generated. Still me. Perfectly consistent.</p>
+            <p>I uploaded 8 photos. Platform analyzed them for 2 minutes. Started training. <em>12-minute estimate.</em></p>
 
-            <p>I spent the next 20 minutes generating images with wild variations in prompts. Sitting, standing, close-up, full body, different outfits, different locations, different times of day. Every single image maintained perfect character consistency.</p>
+            <p>I went and made tea. ☕</p>
+
+            <p>Came back. <strong>Training complete.</strong></p>
+
+            <p>I typed: <em>"woman standing in a coffee shop, casual outfit, smiling."</em></p>
+
+            <p>30 seconds later → An image appeared.</p>
+
+            <p><strong>It was me.</strong> Not vaguely similar. <em>Recognizably, definitively me.</em></p>
+
+            <p>Facial features matched. Proportions right. Look consistent. ✅</p>
+
+            <p>I tried another: <em>"Same woman, walking in a park, athletic wear, side view."</em></p>
+
+            <p>Generated. <strong>Still me. Perfectly consistent.</strong></p>
+
+            <p>For the next 20 minutes, I went wild with prompts: Sitting, standing, close-up, full body, different outfits, locations, times of day.</p>
+
+            <p><span class="stat-highlight">Every single image = Perfect consistency</span></p>
 
             <p>I'm not exaggerating when I say my jaw was on the floor. Three months of failure, solved in 14 minutes by a platform that abstracted away all the technical complexity I'd been drowning in.</p>
 
@@ -375,10 +449,10 @@
         </div>
 
         <div class="next-post">
-            <h3>Continue Reading</h3>
+            <h3>Continue Reading 📖</h3>
             <p><strong>Why 52% of Creators Are Burning Out (And How I Escaped That Statistic)</strong></p>
-            <p>The brand partnership inquiry came at 11:47 PM. Good money, tight timeline. I declined because I was too burned out to take on one more thing...</p>
-            <a href="/blog-creator-burnout.html">
+            <p>🔥 11:47 PM brand partnership inquiry. Good money. Tight timeline. I declined → Too burned out to take on one more thing...</p>
+            <a href="/blog/creator-burnout">
                 Read Next <span>→</span>
             </a>
         </div>
