@@ -441,12 +441,57 @@
             border: 2px solid transparent;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
         }
 
         .blog-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
             border-color: var(--primary);
+        }
+
+        /* Horizontal Scrolling Animation */
+        .scroll-banner {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+            color: white;
+            padding: 15px 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .scroll-content {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .scroll-item {
+            padding: 0 40px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .scroll-banner + * {
+            margin-top: 50px;
         }
 
         .blog-image {
@@ -459,6 +504,8 @@
             font-size: 64px;
             position: relative;
             overflow: hidden;
+            background-size: cover;
+            background-position: center;
         }
 
         .blog-image::before {
@@ -557,6 +604,24 @@
     </style>
 </head>
 <body>
+    <!-- Scrolling Banner -->
+    <div class="scroll-banner">
+        <div class="scroll-content">
+            <span class="scroll-item">🚀 Limited Beta Access Now Open</span>
+            <span class="scroll-item">✨ Character Consistency in 14 Minutes</span>
+            <span class="scroll-item">💰 $0 Hardware Investment</span>
+            <span class="scroll-item">📈 300% Faster Content Production</span>
+            <span class="scroll-item">🔥 100+ Hours Saved Monthly</span>
+            <span class="scroll-item">🎯 Instagram & X Optimized</span>
+            <span class="scroll-item">🚀 Limited Beta Access Now Open</span>
+            <span class="scroll-item">✨ Character Consistency in 14 Minutes</span>
+            <span class="scroll-item">💰 $0 Hardware Investment</span>
+            <span class="scroll-item">📈 300% Faster Content Production</span>
+            <span class="scroll-item">🔥 100+ Hours Saved Monthly</span>
+            <span class="scroll-item">🎯 Instagram & X Optimized</span>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -768,106 +833,100 @@
             </p>
             <div class="blog-grid">
                 <!-- Blog Post 1 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>📸</span>
+                <a href="/blog/comfyui-burnout" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/comfyui-burnout.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>Why I'm Done Spending 12 Hours a Week Just Keeping ComfyUI Running</h3>
                         <p class="blog-excerpt">
                             The truth hit me at 2 AM troubleshooting broken custom nodes. I'd become a system administrator for software I never wanted to manage. 156 hours of maintenance in 6 months. $4,680 in opportunity cost. Here's why I finally switched to cloud AI.
                         </p>
-                        <a href="/blog/comfyui-burnout" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Blog Post 2 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>⚙️</span>
+                <a href="/blog/photoshoot-economics" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/photoshoot-economics.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>The Real Cost of That Instagram Photoshoot (And Why I'll Never Book Another One)</h3>
                         <p class="blog-excerpt">
                             $1,847 for a single day photoshoot. 47 usable images. That's $39.30 per image. At my posting frequency, I'd need $84,000 per year on photography alone. The economics of traditional content creation are broken.
                         </p>
-                        <a href="/blog/photoshoot-economics" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Blog Post 3 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>🐦</span>
+                <a href="/blog/character-consistency" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/character-consistency.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>I Trained My First Consistent AI Character in 14 Minutes (After Failing for Three Months)</h3>
                         <p class="blog-excerpt">
                             Three months learning LoRA training. Thousands of test images. Still couldn't generate the same face twice. Then I tried a cloud platform and solved character consistency in 14 minutes. Here's what changed.
                         </p>
-                        <a href="/blog/character-consistency" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Blog Post 4 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>✨</span>
+                <a href="/blog/creator-burnout" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/creator-burnout.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>Why 52% of Creators Are Burning Out (And How I Escaped That Statistic)</h3>
                         <p class="blog-excerpt">
                             The brand partnership inquiry came at 11:47 PM. Good money, tight timeline. I declined because I was too burned out to take on one more thing. That's when I realized I had a serious problem.
                         </p>
-                        <a href="/blog/creator-burnout" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Blog Post 5 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>📊</span>
+                <a href="/blog/virtual-influencer" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/virtual-influencer.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>My Virtual Influencer Hit 50K Followers in 90 Days (And I've Never Shown My Face)</h3>
                         <p class="blog-excerpt">
                             Complete privacy while building a public brand. 52,300 followers, 4.8% engagement, $3,200 in earnings. Nobody knows who I actually am. Here's how virtual influencers actually work.
                         </p>
-                        <a href="/blog/virtual-influencer" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Blog Post 6 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <span>🚀</span>
+                <a href="/blog/instagram-algorithm" class="blog-card">
+                    <div class="blog-image" style="background-image: url('blogposts/instagram-algorithm.png');">
                     </div>
                     <div class="blog-content">
-                        <div class="blog-date">Featured Post</div>
+                        <div class="blog-date">⭐ Featured Post</div>
                         <h3>Instagram's Algorithm Changed in May and Killed My Reach by 60% (Here's How I Got It Back)</h3>
                         <p class="blog-excerpt">
                             March analytics looked great: 18,500 reach per post. By June: 7,200. The algorithm now prioritizes shares and saves over likes. My content strategy was completely outdated. Here's what actually works now.
                         </p>
-                        <a href="/blog/instagram-algorithm" class="blog-read-more">
+                        <div class="blog-read-more">
                             Read More <span>→</span>
-                        </a>
+                        </div>
                     </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>
