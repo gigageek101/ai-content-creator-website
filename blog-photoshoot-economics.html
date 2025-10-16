@@ -92,6 +92,29 @@
             color: var(--text);
         }
 
+        .callout {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin: 10px 0;
+        }
+
         article p {
             margin-bottom: 24px;
             font-size: 1.1rem;
@@ -236,41 +259,73 @@
 
     <div class="container">
         <article>
-            <p>My credit card statement arrived last week. Right there in black and white: $1,847 for a single day photoshoot. Professional photographer, studio rental, hair and makeup, wardrobe styling. All for about 47 usable images.</p>
+            <p>My credit card statement arrived last week. Right there in black and white:</p>
 
-            <p>That's $39.30 per image. And those images need to last me maybe two weeks of Instagram content before my feed starts looking repetitive.</p>
+            <div class="callout">
+                <div class="callout-title">💳 One Day Photoshoot Receipt</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>📸 Professional photographer</li>
+                    <li>🏢 Studio rental</li>
+                    <li>💄 Hair and makeup</li>
+                    <li>👗 Wardrobe styling</li>
+                </ul>
+                <p style="margin: 10px 0 0 0;"><strong>Total: $1,847</strong><br>Result: 47 usable images<br><span class="stat-highlight">= $39.30 per image</span></p>
+            </div>
 
-            <p>I sat there staring at that number and did the math I'd been avoiding for months. At my current posting frequency (once daily plus stories), I need roughly 180-200 fresh images per month to keep my content looking varied and professional. At photoshoot rates, that would cost me <span class="highlight">$7,074 per month</span>.</p>
+            <p>Those images last maybe 2 weeks before my feed looks repetitive.</p>
 
-            <p>Eighty-four thousand dollars per year. On photography alone.</p>
+            <p><strong>The math I'd been avoiding:</strong> At my posting frequency (daily + stories), I need 180-200 fresh images per month.</p>
 
-            <p>And that assumes I can even book that many shoots, coordinate schedules, have enough outfit changes, and maintain the energy to pose for that many hours. Which, spoiler alert, I absolutely cannot.</p>
+            <p><span class="stat-highlight">$7,074/month</span></p>
+            <p><span class="stat-highlight">$84,000/year</span></p>
 
-            <h2>How Traditional Content Creation Scales (Hint: It Doesn't)</h2>
+            <p>On photography. Alone. 💸</p>
 
-            <p>The advice every Instagram coach gives is the same: create batching days. Shoot a month of content in one marathon session. Change outfits, change backgrounds, shoot multiple concepts.</p>
+            <p>(And that assumes I can even coordinate that many shoots... spoiler: I can't.)</p>
 
-            <p>Sounds efficient in theory. In practice? I've tried this. We've all tried this. And here's what actually happens:</p>
+            <h2>📉 How Traditional Content Creation Scales (Hint: It Doesn't)</h2>
 
-            <p>By hour three of a batching day, I'm exhausted. My smile looks fake in every photo because I'm tired and my face hurts from holding expressions. The photographer is getting frustrated because I'm moving slower. We're behind schedule. The natural light we planned around has changed. We're rushing through the last setups and half the images from those turns out unusable.</p>
+            <p>Every Instagram coach says: <em>"Just batch a month of content in one day!"</em></p>
 
-            <p>I get home with 200 images that took 11 hours to shoot. After culling the bad ones, choosing the best variations, and accounting for images that are too similar, I have maybe 80 actually distinct, usable photos. That's 8.2 minutes of shooting per usable image, not counting setup time, coordination, editing, or any of the other overhead.</p>
+            <p><strong>What actually happens:</strong></p>
 
-            <p>And critically, all 80 images were shot on the same day. Same lighting. Same energy. Same general look. So while technically I have content for a month, Instagram's algorithm knows these images are related. The variety isn't as diverse as posting frequency demands.</p>
+            <div class="callout">
+                <div class="callout-title">😫 Hour 3 of a Batching Day</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>💀 I'm exhausted</li>
+                    <li>😬 My smile looks fake (face hurts)</li>
+                    <li>📸 Photographer is frustrated (I'm slow)</li>
+                    <li>🌅 Natural light changed</li>
+                    <li>⏰ Behind schedule, rushing</li>
+                    <li>❌ Half the final images = unusable</li>
+                </ul>
+            </div>
 
-            <h2>The Outfit Change Nightmare</h2>
+            <p><strong>The reality:</strong> 11 hours of shooting → 200 images → After culling → 80 usable photos</p>
 
-            <p>Let's talk about something nobody mentions: outfit logistics.</p>
+            <p>That's 8.2 minutes per usable image. Not counting setup, coordination, editing, travel...</p>
 
-            <p>For content diversity, I need different looks. Different vibes. Casual, professional, athletic, going out, cozy at home, you name it. That means I need to own all these outfits, transport them to shoots, or rent them.</p>
+            <p><strong>The bigger problem:</strong> All 80 images were shot the same day. Same lighting. Same energy. Same vibe. Instagram's algorithm <em>knows</em> these images are related. The "variety" isn't fooling anyone.</p>
 
-            <p>Last month I tried renting designer pieces for a shoot because I wanted elevated content. The rental service cost $189 for a four-day period. I got three outfits, used them for maybe 90 minutes total, and returned them. That's $63 per outfit for 30 minutes of wear.</p>
+            <h2>👗 The Outfit Change Nightmare</h2>
 
-            <p>And don't get me started on the coordination. Finding outfits that photograph well, that fit properly, that match the aesthetic I'm building, that work in the planned location, that aren't too similar to recent posts. It's a part-time job before the shoot even happens.</p>
+            <p>Let's talk about something nobody mentions: <strong>outfit logistics.</strong></p>
 
-            <p>Meanwhile, I'm watching AI influencers on Instagram post daily in perfect outfits that were generated in seconds. Same person, different outfit, instant. No rental fees, no coordination, no closet full of clothes I bought specifically for photo purposes.</p>
+            <p>For content diversity, I need different vibes: Casual. Professional. Athletic. Going out. Cozy at home.</p>
 
-            <h2>When Weather Destroys Your Content Calendar</h2>
+            <div class="callout">
+                <div class="callout-title">💸 Designer Rental Math</div>
+                <p style="margin: 0;">$189 for 4 days → 3 outfits → Used for 90 minutes total</p>
+                <p style="margin: 10px 0 0 0;"><span class="stat-highlight">= $63 per outfit</span><br>For 30 minutes of wear.</p>
+            </div>
+
+            <p><strong>The coordination nightmare:</strong> Finding outfits that photograph well, fit properly, match my aesthetic, work at the location, aren't too similar to recent posts...</p>
+
+            <p>It's a part-time job BEFORE the shoot even happens. 😩</p>
+
+            <p><strong>Meanwhile:</strong> AI influencers post daily in perfect outfits. Generated in seconds. No rental fees. No coordination. No closet full of "content clothes."</p>
+
+            <h2>🌧️ When Weather Destroys Your Content Calendar</h2>
 
             <p>Here's a fun story. Two months ago I booked an outdoor shoot for what I was calling my "summer content series." Golden hour shots at a local park, very natural aesthetic, would give me fresh content through August.</p>
 
@@ -302,19 +357,23 @@
 
             <p>I'm running a one-person content business. I'm also the creative director, project manager, model, wardrobe stylist, location scout, and accountant. Every shoot adds another layer of operational complexity that takes energy away from the actual reason I'm doing this: creating content that resonates with my audience.</p>
 
-            <h2>What Instagram Actually Rewards in 2025</h2>
+            <h2>📊 What Instagram Actually Rewards in 2025</h2>
 
-            <p>Instagram's algorithm changed substantially this year. The May update prioritized shares and saves over likes. The platform wants content that provides value, that people actively want to revisit and send to friends.</p>
+            <p>Instagram's May update changed everything. The algorithm now prioritizes <strong>shares and saves</strong> over likes.</p>
 
-            <p>That means educational content, tutorials, transformations, storytelling. Content types that aren't particularly photoshoot-friendly.</p>
+            <div class="callout">
+                <div class="callout-title">🎯 My Most Successful Post Last Month</div>
+                <p style="margin: 0;"><strong>4,700 saves</strong> 🔖</p>
+                <p style="margin: 10px 0 0 0;">Type: Productivity tips carousel<br>Creation time: 45 minutes<br>Cost: $0<br>Reach: <strong>10X better</strong> than expensive photoshoot content</p>
+            </div>
 
-            <p>My most successful post last month got 4,700 saves. It was a carousel about productivity tips with simple graphics and text overlays. Total creation time: 45 minutes. Cost: zero dollars. Reach: 10X better than my expensive photoshoot content.</p>
+            <p>The algorithm wants: Educational content. Tutorials. Transformations. Storytelling.</p>
 
-            <p>I'm not saying photography doesn't matter. Visual quality absolutely still drives performance. But the old model of "post pretty pictures of yourself" is less effective than it was two years ago. The algorithm wants diverse content types, frequent posting, and value-driven material.</p>
+            <p><strong>Not just pretty pictures.</strong></p>
 
-            <p>Traditional photoshoots don't support that content strategy very well. They're expensive, time-consuming, and optimized for a style of Instagram content that's becoming less algorithmically favorable.</p>
+            <p>Traditional photoshoots don't support this content strategy. They're expensive, time-consuming, and optimized for a style of Instagram that's becoming less algorithmically favorable.</p>
 
-            <h2>How AI Changed My Content Economics</h2>
+            <h2>🤖 How AI Changed My Content Economics</h2>
 
             <p>I started experimenting with AI-generated images about six weeks ago. Not as a full replacement for photography, just testing to see if it could fill gaps in my content calendar.</p>
 
@@ -359,10 +418,10 @@
         </div>
 
         <div class="next-post">
-            <h3>Continue Reading</h3>
-            <p><strong>I Trained My First Consistent AI Character in 14 Minutes (After Failing for Three Months with ComfyUI)</strong></p>
-            <p>Three months learning LoRA training. Thousands of test images. Still couldn't generate the same face twice. Then I tried a cloud platform and everything changed...</p>
-            <a href="/blog-character-consistency.html">
+            <h3>Continue Reading 📖</h3>
+            <p><strong>I Trained My First Consistent AI Character in 14 Minutes (After Failing for Three Months)</strong></p>
+            <p>🎭 3 months learning LoRA training → Still couldn't generate the same face twice<br>Then 14 minutes changed everything...</p>
+            <a href="/blog/character-consistency">
                 Read Next <span>→</span>
             </a>
         </div>
