@@ -1,0 +1,10 @@
+{
+  "name": "ai-content-creator-website",
+  "version": "1.0.0",
+  "description": "AI Content Creator platform for influencers",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {}
+}
+

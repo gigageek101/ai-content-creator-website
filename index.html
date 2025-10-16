@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Creator - Built for Influencers Who Refuse to Compromise</title>
+    <meta name="description" content="Create stunning NSFW content in seconds. The first AI-powered platform built specifically for OnlyFans creators, virtual influencers, and digital entrepreneurs. Beta waitlist now open.">
+    <meta name="keywords" content="AI content creator, OnlyFans AI, virtual influencer, NSFW AI, content generation, adult content AI">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI Content Creator - Built for Influencers Who Refuse to Compromise">
+    <meta property="og:description" content="Create stunning NSFW content in seconds with AI. Purpose-built for adult creators and virtual influencers.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="AI Content Creator - Built for Influencers Who Refuse to Compromise">
+    <meta property="twitter:description" content="Create stunning NSFW content in seconds with AI. Purpose-built for adult creators and virtual influencers.">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #9333ea;
+            --primary-light: #a855f7;
+            --primary-dark: #7e22ce;
+            --accent: #ec4899;
+            --bg: #0f0f1e;
+            --bg-soft: #1a1a2e;
+            --bg-card: #16213e;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 40px rgba(147, 51, 234, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 80px 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -400px;
+            right: -300px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -300px;
+            left: -200px;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-30px) translateX(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero-title-section {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        .highlight {
+            color: var(--primary-light);
+            font-weight: 700;
+        }
+
+        .hero-video-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 60px rgba(147, 51, 234, 0.4);
+            animation: fadeInUp 1s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-video-container:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 70px rgba(147, 51, 234, 0.5);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(147, 51, 234, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(147, 51, 234, 0.6);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+            background: var(--bg-soft);
+        }
+
+        .section:nth-child(even) {
+            background: var(--bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--text);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .feature-card ul {
+            margin-top: 16px;
+            padding-left: 20px;
+        }
+
+        .feature-card li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Beta Signup */
+        .beta-signup {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
+        .signup-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--primary);
+        }
+
+        .signup-container h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .signup-container .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 24px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(147, 51, 234, 0.4);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(147, 51, 234, 0.6);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid var(--border);
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 20px;
+            }
+
+            .hero-title-section {
+                margin-bottom: 30px;
+            }
+
+            .hero-video-container {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .signup-container {
+                padding: 40px 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-title-section">
+                <h1>The AI Content Creator Built for Influencers Who Refuse to Compromise</h1>
+                <p class="subtitle">
+                    Create <span class="highlight">stunning NSFW content in seconds</span> with our AI-powered platform.
+                    Fully uncensored, character-consistent, and built specifically for OnlyFans creators, 
+                    virtual influencers, and digital entrepreneurs who demand more.
+                </p>
+            </div>
+            
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="1016.mov" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+            
+            <a href="#beta-signup" class="cta-button">
+                <span>Join Beta Waitlist</span>
+                <span>✨</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Market Opportunity -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">The $10.59 Billion Opportunity</h2>
+            <p class="section-subtitle">
+                The AI-powered content creation market is exploding. OnlyFans creators pioneering AI integration 
+                are seeing revenue increases of $2 million per month, and the AI girlfriend market alone is hitting 
+                $9.5 billion by 2028.
+            </p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$10.59B</div>
+                    <div class="stat-label">AI Content Market by 2033</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">19.4%</div>
+                    <div class="stat-label">Annual Growth Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$2M/mo</div>
+                    <div class="stat-label">Top Creator Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$154B</div>
+                    <div class="stat-label">Virtual Influencer Market</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Traditional AI Tools Fail Adult Content Creators</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🚫</span>
+                    <h3>The Censorship Problem</h3>
+                    <p>Major AI platforms like MidJourney, DALL-E, and Stable Diffusion impose strict NSFW content filters. Even when creators find workarounds, the results are anatomically inaccurate, visually inconsistent, and impossible to use professionally.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🎭</span>
+                    <h3>The Consistency Challenge</h3>
+                    <p>Creating a successful virtual influencer requires perfect character consistency across hundreds of images. Basic AI generators produce different faces, body types, and features with every prompt, making it impossible to build a recognizable brand.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">⚖️</span>
+                    <h3>The Monetization Gap</h3>
+                    <p>Many AI platforms prohibit using outputs for adult content, OnlyFans subscriptions, or commercial purposes. This legal gray area puts creators at risk and limits earning potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">The First AI Platform Built for NSFW Influencers</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔓</span>
+                    <h3>Uncensored, Unrestricted Generation</h3>
+                    <p>Unlike mainstream platforms, we don't censor your creativity. Our proprietary AI models generate:</p>
+                    <ul>
+                        <li>OnlyFans-ready images with professional lighting</li>
+                        <li>Instagram teaser content that drives traffic</li>
+                        <li>Custom fetish and niche content</li>
+                        <li>Virtual influencer personas that look real</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">👤</span>
+                    <h3>Perfect Character Consistency</h3>
+                    <p>Build your AI influencer persona once, then generate unlimited content:</p>
+                    <ul>
+                        <li>Upload 10-20 reference images to train your character</li>
+                        <li>Maintain facial features and body type across all content</li>
+                        <li>Generate 50+ images in a single session</li>
+                        <li>25-40% higher subscriber retention</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">💼</span>
+                    <h3>Commercial Licensing & Legal Protection</h3>
+                    <p>Every image and video comes with full commercial rights:</p>
+                    <ul>
+                        <li>Use on OnlyFans, Fansly, Fanvue without restrictions</li>
+                        <li>100% synthetic (no real person likenesses)</li>
+                        <li>Protected from deepfake legal issues</li>
+                        <li>Compliant with emerging AI regulations</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🎬</span>
+                    <h3>Image-to-Video AI Animation</h3>
+                    <p>Transform static images into moving videos:</p>
+                    <ul>
+                        <li>Realistic motion and facial expressions</li>
+                        <li>Create talking head videos for fan messages</li>
+                        <li>Generate teaser clips for social media</li>
+                        <li>Export up to 6-minute videos</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">💰</span>
+                    <h3>Zero Transaction Fees Forever</h3>
+                    <p>Unlike platforms charging $49-99/month:</p>
+                    <ul>
+                        <li>Free beta access (permanent for early adopters)</li>
+                        <li>No hidden costs or transaction fees</li>
+                        <li>Generate unlimited content</li>
+                        <li>$0 production costs vs. $500-2,000 per photoshoot</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI Chatbot Integration (Coming Soon)</h3>
+                    <p>Automate fan interactions and boost revenue:</p>
+                    <ul>
+                        <li>Personality-matched conversations</li>
+                        <li>Automatic DM responses</li>
+                        <li>Upsell automation for PPV content</li>
+                        <li>40-60% revenue increase reported by top creators</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Who This Platform Is Built For</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">💎</span>
+                    <h3>OnlyFans & Fansly Creators</h3>
+                    <p>Competing in a $2 billion subscription content market. Generate daily content without photoshoot fatigue, fulfill custom requests instantly, and create PPV content libraries at scale. Creators report 35-50% higher monthly earnings.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">✨</span>
+                    <h3>Virtual Influencer Entrepreneurs</h3>
+                    <p>Launch your AI influencer in days, not months. Top-earning AI influencers like Aitana Lopez generate $10,000/month. Build your following without ever showing your real face.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🎭</span>
+                    <h3>Faceless Content Creators</h3>
+                    <p>Protect your privacy while monetizing your creativity. Enter the adult content space without personal exposure. Test multiple niches with different AI personas simultaneously.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🏢</span>
+                    <h3>Content Agencies & Management Teams</h3>
+                    <p>Scale agency operations to 50+ client accounts. Reduce content production costs by 90%. Agencies report 3-5X faster account growth and 40-60% higher profit margins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">How We Compare to the Competition</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔴</span>
+                    <h3>Generic AI Generators</h3>
+                    <p>MidJourney, DALL-E, Stable Diffusion</p>
+                    <ul>
+                        <li>❌ Heavy NSFW censorship</li>
+                        <li>❌ No character consistency tools</li>
+                        <li>❌ Complex technical setup</li>
+                        <li>❌ Expensive ($20-100/month)</li>
+                        <li>❌ No commercial rights for adult content</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🟡</span>
+                    <h3>NSFW-Specific Tools</h3>
+                    <p>Limited functionality platforms</p>
+                    <ul>
+                        <li>✅ NSFW-friendly</li>
+                        <li>⚠️ Limited character consistency</li>
+                        <li>❌ No video generation</li>
+                        <li>❌ Expensive ($19-50/month)</li>
+                        <li>❌ No professional photography quality</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🟢</span>
+                    <h3>Our Platform</h3>
+                    <p>Purpose-built for creators</p>
+                    <ul>
+                        <li>✅ Fully uncensored</li>
+                        <li>✅ Advanced character consistency</li>
+                        <li>✅ Integrated video AI</li>
+                        <li>✅ Free beta access</li>
+                        <li>✅ Full commercial licensing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beta Signup -->
+    <section class="beta-signup" id="beta-signup">
+        <div class="container">
+            <div class="signup-container">
+                <h2>Join the Beta Waitlist</h2>
+                <p class="subtitle">Limited to 500 beta users. Get permanent free access, lifetime discounts, and early mover advantage. Priority access for active creators.</p>
+                
+                <form id="betaForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Primary Platform</label>
+                        <select name="platform">
+                            <option value="">Select your platform</option>
+                            <option value="onlyfans">OnlyFans</option>
+                            <option value="fansly">Fansly</option>
+                            <option value="instagram">Instagram (Virtual Influencer)</option>
+                            <option value="agency">Content Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Current Monthly Revenue (optional)</label>
+                        <select name="revenue">
+                            <option value="">Select range</option>
+                            <option value="starting">Just starting</option>
+                            <option value="1-5k">$1-$5,000</option>
+                            <option value="5-20k">$5,000-$20,000</option>
+                            <option value="20k+">$20,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What's your #1 challenge with content creation? *</label>
+                        <textarea name="message" required placeholder="Example: 'I spend 4 hours per day on photoshoots and still can't keep up with demand...'"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>How many pieces of content do you need monthly?</label>
+                        <select name="content_volume">
+                            <option value="">Select volume</option>
+                            <option value="50-100">50-100 images</option>
+                            <option value="100-300">100-300 images</option>
+                            <option value="300+">300+ images</option>
+                            <option value="video">Need video content too</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="virtual_influencer" value="yes">
+                            I'm interested in creating an AI virtual influencer
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submitButton">
+                        Get Beta Access ✨
+                    </button>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <p>🎉 You're on the waitlist! Check your email within 72 hours for your beta invite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Content Creator Platform. Built for creators who refuse to compromise.</p>
+            <p style="margin-top: 12px;">
+                Ethical AI | Full Commercial Rights | NSFW-Ready | Privacy Protected
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('betaForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = document.getElementById('submitButton');
+            const form = document.getElementById('betaForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                platform: formData.get('platform') || 'Not provided',
+                revenue: formData.get('revenue') || 'Not provided',
+                message: formData.get('message'),
+                content_volume: formData.get('content_volume') || 'Not provided',
+                virtual_influencer: formData.get('virtual_influencer') || 'no'
+            };
+            
+            try {
+                const response = await fetch('/api/beta-signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    alert('There was an error. Please try again or email us directly.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Get Beta Access ✨';
+                }
+            } catch (error) {
+                alert('There was an error. Please try again or email us directly.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get Beta Access ✨';
+            }
+        });
+
+        // Smooth scroll for CTA
+        document.querySelector('.cta-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('beta-signup').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+
