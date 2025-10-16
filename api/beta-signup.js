@@ -10,12 +10,13 @@ async function sendTelegramNotification(submission) {
 
 👤 *Name:* ${submission.name}
 📧 *Email:* ${submission.email}
+💬 *Telegram:* ${submission.telegram}
 📱 *Platform:* ${submission.platform}
-💰 *Revenue:* ${submission.revenue}
+🛠️ *Current Method:* ${submission.current_method}
 📊 *Content Volume:* ${submission.content_volume}
 🤖 *Virtual Influencer:* ${submission.virtual_influencer}
 
-💬 *Challenge:*
+💭 *Challenge:*
 ${submission.message}
 
 ⏰ *Received:* ${new Date(submission.timestamp).toLocaleString()}
@@ -72,7 +73,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { name, email, platform, revenue, message, content_volume, virtual_influencer } = req.body
+    const { name, email, telegram, platform, current_method, message, content_volume, virtual_influencer } = req.body
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -85,8 +86,9 @@ module.exports = async (req, res) => {
       id: Date.now().toString(),
       name,
       email,
+      telegram: telegram || 'Not provided',
       platform: platform || 'Not provided',
-      revenue: revenue || 'Not provided',
+      current_method: current_method || 'Not provided',
       message,
       content_volume: content_volume || 'Not provided',
       virtual_influencer: virtual_influencer || 'no',
@@ -102,8 +104,10 @@ module.exports = async (req, res) => {
     console.log('ID:', submission.id)
     console.log('Name:', name)
     console.log('Email:', email)
+    console.log('Telegram:', telegram)
     console.log('Platform:', platform)
-    console.log('Revenue:', revenue)
+    console.log('Current Method:', current_method)
+    console.log('Content Volume:', content_volume)
     console.log('Message:', message)
     console.log('Timestamp:', submission.timestamp)
     console.log('Telegram sent:', telegramSent)

@@ -568,10 +568,7 @@
             </div>
             
             <div class="hero-video-container">
-                <video autoplay muted loop playsinline>
-                    <source src="1016.mov" type="video/mp4">
-                    Your browser does not support video.
-                </video>
+                <iframe src="https://www.loom.com/embed/1ccdef9392bc43ef8738901e76cbffaf?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="width: 100%; height: 100%; border-radius: 20px;"></iframe>
             </div>
             
             <a href="#beta-signup" class="cta-button">
@@ -894,6 +891,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Telegram Handle (Optional)</label>
+                        <input type="text" name="telegram" placeholder="@yourhandle">
+                    </div>
+
+                    <div class="form-group">
                         <label>Primary Platform (Select all that apply)</label>
                         <select name="platform">
                             <option value="">Select your platform</option>
@@ -983,6 +985,7 @@
             const data = {
                 name: formData.get('name'),
                 email: formData.get('email'),
+                telegram: formData.get('telegram') || 'Not provided',
                 platform: formData.get('platform') || 'Not provided',
                 current_method: formData.get('current_method') || 'Not provided',
                 message: formData.get('message'),
