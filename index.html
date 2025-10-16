@@ -452,12 +452,11 @@
             border-color: var(--primary);
         }
 
-        /* Horizontal Scrolling Animation */
+        /* Scroll Progress Bar */
         .scroll-banner {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
-            color: white;
+            background: white;
+            color: var(--text);
             padding: 15px 0;
-            overflow: hidden;
             position: fixed;
             top: 0;
             left: 0;
@@ -468,26 +467,22 @@
 
         .scroll-content {
             display: flex;
-            animation: scroll 30s linear infinite;
-            white-space: nowrap;
-        }
-
-        .scroll-item {
-            padding: 0 40px;
+            justify-content: center;
+            align-items: center;
             font-weight: 600;
             font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            text-align: center;
+            transition: opacity 0.3s ease;
         }
 
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+        .scroll-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.1s ease-out;
         }
 
         .scroll-banner + * {
@@ -604,26 +599,16 @@
     </style>
 </head>
 <body>
-    <!-- Scrolling Banner -->
+    <!-- Scroll Progress Bar -->
     <div class="scroll-banner">
-        <div class="scroll-content">
-            <span class="scroll-item">🚀 Limited Beta Access Now Open</span>
-            <span class="scroll-item">✨ Character Consistency in 14 Minutes</span>
-            <span class="scroll-item">💰 $0 Hardware Investment</span>
-            <span class="scroll-item">📈 300% Faster Content Production</span>
-            <span class="scroll-item">🔥 100+ Hours Saved Monthly</span>
-            <span class="scroll-item">🎯 Instagram & X Optimized</span>
-            <span class="scroll-item">🚀 Limited Beta Access Now Open</span>
-            <span class="scroll-item">✨ Character Consistency in 14 Minutes</span>
-            <span class="scroll-item">💰 $0 Hardware Investment</span>
-            <span class="scroll-item">📈 300% Faster Content Production</span>
-            <span class="scroll-item">🔥 100+ Hours Saved Monthly</span>
-            <span class="scroll-item">🎯 Instagram & X Optimized</span>
+        <div class="scroll-content" id="currentSection">
+            🚀 Cloud AI Content Creator
         </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" data-section="🚀 Cloud AI Content Creator">
         <div class="hero-content">
             <div class="hero-title-section">
                 <h1>The Cloud AI Content Creator Built for Creators Who Are Done with ComfyUI Headaches</h1>
@@ -644,7 +629,7 @@
     </section>
 
     <!-- Market Context -->
-    <section class="section">
+    <section class="section" data-section="📈 Market Overview">
         <div class="container">
             <h2 class="section-title">The AI Content Creation Market Is Exploding</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.2rem; color: var(--text-secondary);">
@@ -672,7 +657,7 @@
     </section>
 
     <!-- Problems -->
-    <section class="features">
+    <section class="features" data-section="❌ ComfyUI Problems">
         <div class="container">
             <h2 class="section-title">Why Self-Hosting ComfyUI Is Killing Your Creative Flow</h2>
             <div class="features-grid">
@@ -698,7 +683,7 @@
     </section>
 
     <!-- Solution Features -->
-    <section class="features">
+    <section class="features" data-section="✨ Our Solution">
         <div class="container">
             <h2 class="section-title">Cloud AI Content Generation That Just Works</h2>
             <div class="features-grid">
@@ -742,7 +727,7 @@
     </section>
 
     <!-- Who It's For -->
-    <section class="section">
+    <section class="section" data-section="🎯 Target Audience">
         <div class="container">
             <h2 class="section-title">Who This Platform Is Built For</h2>
             <div class="features-grid">
@@ -780,7 +765,7 @@
     </section>
 
     <!-- Comparison -->
-    <section class="features">
+    <section class="features" data-section="📊 Comparison">
         <div class="container">
             <h2 class="section-title">Cloud Simplicity vs. Self-Hosting Chaos</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.2rem; color: var(--text-secondary);">
@@ -825,7 +810,7 @@
     </section>
 
     <!-- Blog Section -->
-    <section class="section">
+    <section class="section" data-section="💬 User Stories">
         <div class="container">
             <h2 class="section-title">What Users of Traditional Tools Say...</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.2rem; color: var(--text-secondary);">
@@ -932,7 +917,7 @@
     </section>
 
     <!-- Beta Signup -->
-    <section class="beta-signup" id="beta-signup">
+    <section class="beta-signup" id="beta-signup" data-section="🚀 Join Beta Waitlist">
         <div class="container">
             <div class="signup-container">
                 <h2>Join the Beta Waitlist: Limited Early Access</h2>
@@ -1079,6 +1064,38 @@
             e.preventDefault();
             document.getElementById('beta-signup').scrollIntoView({ behavior: 'smooth' });
         });
+
+        // Scroll Progress Bar and Section Tracking
+        function updateScrollProgress() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const currentSectionEl = document.getElementById('currentSection');
+            const sections = document.querySelectorAll('section[data-section]');
+            
+            // Calculate scroll progress
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            
+            scrollProgress.style.width = progress + '%';
+            
+            // Find current section
+            let currentSection = '🚀 Cloud AI Content Creator';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                // Check if section is in viewport (with some offset for better UX)
+                if (rect.top <= windowHeight / 3) {
+                    currentSection = section.getAttribute('data-section');
+                }
+            });
+            
+            currentSectionEl.textContent = currentSection;
+        }
+
+        // Update on scroll
+        window.addEventListener('scroll', updateScrollProgress);
+        // Update on load
+        window.addEventListener('load', updateScrollProgress);
     </script>
 </body>
 </html>
