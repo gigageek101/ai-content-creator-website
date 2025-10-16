@@ -1,4 +1,30 @@
 {
+  "rewrites": [
+    {
+      "source": "/blog/comfyui-burnout",
+      "destination": "/blog-comfyui-burnout.html"
+    },
+    {
+      "source": "/blog/photoshoot-economics",
+      "destination": "/blog-photoshoot-economics.html"
+    },
+    {
+      "source": "/blog/character-consistency",
+      "destination": "/blog-character-consistency.html"
+    },
+    {
+      "source": "/blog/creator-burnout",
+      "destination": "/blog-creator-burnout.html"
+    },
+    {
+      "source": "/blog/virtual-influencer",
+      "destination": "/blog-virtual-influencer.html"
+    },
+    {
+      "source": "/blog/instagram-algorithm",
+      "destination": "/blog-instagram-algorithm.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
