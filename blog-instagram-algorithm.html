@@ -92,6 +92,29 @@
             color: var(--text);
         }
 
+        .callout {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin: 10px 0;
+        }
+
         article p {
             margin-bottom: 24px;
             font-size: 1.1rem;
@@ -236,25 +259,55 @@
 
     <div class="container">
         <article>
-            <p>My March analytics looked great. Average reach per post: 18,500. Engagement rate: 5.2%. Follower growth: 400-600 per week. Everything was trending up.</p>
+            <div class="callout">
+                <div class="callout-title">📊 March Analytics: Looking Great</div>
+                <ul style="margin: 0;">
+                    <li>📈 Average reach per post: <strong>18,500</strong></li>
+                    <li>💬 Engagement rate: <strong>5.2%</strong></li>
+                    <li>👥 Follower growth: <strong>400-600/week</strong></li>
+                </ul>
+                <p style="margin: 15px 0 0 0;">Everything trending up. ✅</p>
+            </div>
 
-            <p>Then May happened.</p>
+            <p><strong>Then May happened.</strong> 💥</p>
 
-            <p>By June, my average reach had dropped to 7,200. Engagement rate fell to 2.8%. Follower growth slowed to 100-150 weekly. And I had no idea why.</p>
+            <div class="callout">
+                <div class="callout-title">📉 June Analytics: Total Collapse</div>
+                <ul style="margin: 0;">
+                    <li>📉 Average reach: <span class="stat-highlight">7,200</span> (-61%)</li>
+                    <li>💔 Engagement rate: <strong>2.8%</strong> (-46%)</li>
+                    <li>😰 Follower growth: <strong>100-150/week</strong> (-75%)</li>
+                </ul>
+                <p style="margin: 15px 0 0 0;">And I had <strong>no idea why.</strong></p>
+            </div>
 
-            <p>I hadn't changed my content strategy. I was posting the same frequency, similar content types, using hashtags correctly. But suddenly, the algorithm decided my content wasn't worth showing to people.</p>
+            <p>I hadn't changed anything. Same frequency. Similar content. Hashtags correct. But suddenly → Algorithm decided my content wasn't worth showing.</p>
 
-            <p>I wasn't alone. Across creator communities, people were reporting similar drops. Something had changed in Instagram's algorithm, and those of us who hadn't adapted were paying the price.</p>
+            <p><strong>I wasn't alone.</strong> Across creator communities = Similar drops reported everywhere.</p>
 
-            <h2>What Actually Changed in May</h2>
+            <p>Something changed in Instagram's algorithm. Those of us who hadn't adapted? <strong>Paying the price.</strong> 💸</p>
 
-            <p>Instagram rolled out a massive algorithm update between May and June that fundamentally shifted how content gets distributed. The changes were significant enough that creator-focused platforms published emergency guides trying to help people adjust.</p>
+            <h2>🔄 What Actually Changed in May</h2>
 
-            <p>The biggest shift: <span class="highlight">Instagram now prioritizes shares and saves over likes and comments</span>. Content that people actively save or share via DM receives roughly 3X more reach than posts generating only superficial engagement.</p>
+            <p>Instagram rolled out a <strong>massive algorithm update</strong> (May-June) that fundamentally shifted content distribution. Changes so significant → Creator platforms published emergency guides.</p>
 
-            <p>Think about what this means. A post with 500 likes but minimal saves performs worse than a post with 200 likes and 50 saves. The algorithm interprets saves and shares as signals that content has lasting value worth revisiting or sharing with friends.</p>
+            <div class="callout">
+                <div class="callout-title">🚨 The Biggest Shift</div>
+                <p style="margin: 0;"><strong>Instagram now prioritizes shares and saves over likes and comments</strong></p>
+                <p style="margin: 15px 0 0 0;">Content that people save or share via DM = <span class="stat-highlight">3X</span> more reach than posts with only superficial engagement.</p>
+            </div>
 
-            <p>This completely flips traditional engagement optimization. For years, creators focused on getting comments through engagement bait and crafting captions that encouraged replies. Now, that matters less than creating content people want to reference later.</p>
+            <p><strong>Think about what this means:</strong></p>
+
+            <p>Post A: 500 likes, minimal saves → <strong>Worse performance</strong><br>
+            Post B: 200 likes, 50 saves → <strong>Better performance</strong></p>
+
+            <p>The algorithm interprets saves + shares as signals that content has <strong>lasting value</strong> worth revisiting or sharing with friends. 🔖</p>
+
+            <p><strong>This completely flips traditional engagement optimization.</strong></p>
+
+            <p>For years: Get comments through engagement bait + captions encouraging replies.<br>
+            Now: Create content people want to <strong>reference later.</strong> 📚</p>
 
             <p>The second major change involved how the algorithm evaluates content quality. Instagram deployed more sophisticated AI that analyzes dozens of behavioral signals: how long people watch, whether they visit your profile, whether they scroll past quickly, comment quality rather than just comment quantity.</p>
 
@@ -294,26 +347,36 @@
 
             <p>My lifestyle photography, however aesthetically pleasing, provided none of that.</p>
 
-            <h2>The Production Problem</h2>
+            <h2>⚠️ The Production Problem</h2>
 
-            <p>Understanding what works is different from being able to create it consistently. Educational carousels, infographics, and value-driven content require substantially more work than lifestyle photography.</p>
+            <p><strong>Understanding what works ≠ Being able to create it consistently.</strong></p>
 
-            <p>A lifestyle photo might take an hour total (if you're quick). An educational carousel teaching a process requires:</p>
-            <ul>
-                <li>Research to ensure accuracy</li>
-                <li>Content writing and editing</li>
-                <li>Design and layout in Canva or similar</li>
-                <li>Creating multiple slides with good information hierarchy</li>
-                <li>Proofreading and revision</li>
-            </ul>
+            <p>Educational carousels, infographics, value-driven content = <strong>Substantially more work</strong> than lifestyle photography.</p>
 
-            <p>We're talking 3-4 hours minimum for quality educational content. Doing this daily (or even 3-4 times weekly) would consume all my available time.</p>
+            <div class="callout">
+                <div class="callout-title">⏰ Time Comparison</div>
+                <p style="margin: 0;"><strong>Lifestyle photo:</strong> ~1 hour ✅</p>
+                <p style="margin: 15px 0 10px 0;"><strong>Educational carousel:</strong></p>
+                <ul style="margin: 0;">
+                    <li>📚 Research (accuracy)</li>
+                    <li>✍️ Writing + editing</li>
+                    <li>🎨 Design + layout</li>
+                    <li>📄 Multiple slides (good hierarchy)</li>
+                    <li>🔍 Proofreading + revision</li>
+                </ul>
+                <p style="margin: 15px 0 0 0;"><span class="stat-highlight">3-4 hours minimum</span></p>
+            </div>
 
-            <p>I faced an uncomfortable choice: maintain my posting frequency with content that doesn't work anymore, or reduce frequency to create better content and accept slower growth during the transition.</p>
+            <p>Doing this daily (or even 3-4x/week) = <strong>All my available time consumed.</strong> 😰</p>
 
-            <p>Neither option was appealing. I needed volume AND value, which seemed impossible with traditional content creation workflows.</p>
+            <p><strong>The uncomfortable choice:</strong></p>
 
-            <h2>How AI Solved My Algorithm Problem</h2>
+            <p>Option A: Maintain frequency with content that doesn't work anymore<br>
+            Option B: Reduce frequency to create better content (accept slower growth)</p>
+
+            <p><strong>Neither was appealing.</strong> I needed volume AND value. With traditional workflows? <strong>Impossible.</strong> ❌</p>
+
+            <h2>🤖 How AI Solved My Algorithm Problem</h2>
 
             <p>This is where AI content generation became critical to my strategy.</p>
 
@@ -400,9 +463,9 @@
         </div>
 
         <div class="next-post">
-            <h3>Continue Reading</h3>
-            <p><strong>Explore More Insights</strong></p>
-            <p>Ready to stop fighting with infrastructure and start creating content that actually works? Join thousands of creators who've already made the switch to cloud AI.</p>
+            <h3>🏠 Ready to Get Started?</h3>
+            <p><strong>Stop Fighting with Infrastructure. Start Creating Content That Works.</strong></p>
+            <p>🚀 Join creators who've already made the switch to cloud AI<br>✨ Character consistency in 14 minutes, not 3 months<br>💰 Profitable from day one with near-zero production costs</p>
             <a href="/">
                 Back to Home <span>→</span>
             </a>
