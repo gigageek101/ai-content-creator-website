@@ -92,6 +92,29 @@
             color: var(--text);
         }
 
+        .callout {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin: 10px 0;
+        }
+
         article p {
             margin-bottom: 24px;
             font-size: 1.1rem;
@@ -242,76 +265,113 @@
 
             <p>If you've tried self-hosting ComfyUI or any local AI image generator, you know exactly what I'm talking about. The promise sounds perfect: unlimited generation, complete control, no subscription fees. The reality? A second full-time job maintaining infrastructure you didn't sign up for.</p>
 
-            <h2>The Hidden Tax Nobody Tells You About</h2>
+            <h2>💸 The Hidden Tax Nobody Tells You About</h2>
 
-            <p>When I first set up ComfyUI six months ago, I calculated the obvious costs. A decent GPU ran me $2,100. Electricity would add maybe $80 per month. Cloud storage for models, another $15. The math seemed reasonable compared to subscription tools.</p>
-
-            <p>What I didn't calculate was time. My time has value, even if I'm not billing by the hour. And over six months, I've spent approximately 156 hours on tasks that have nothing to do with actual content creation.</p>
-
-            <p>Let me break that down for you:</p>
+            <p>When I first set up ComfyUI six months ago, I calculated the obvious costs:</p>
             <ul>
-                <li>Initial setup and configuration: 14 hours (way more than the "quick install" tutorials promised)</li>
-                <li>Learning custom nodes and workflows: 22 hours</li>
-                <li>Troubleshooting when updates break things: 47 hours</li>
-                <li>Managing model downloads and storage: 18 hours</li>
-                <li>Dealing with CUDA driver conflicts: 9 hours</li>
-                <li>Reinstalling after major issues: 12 hours</li>
-                <li>Regular maintenance and updates: 34 hours over six months</li>
+                <li>🖥️ Decent GPU: $2,100</li>
+                <li>⚡ Electricity: ~$80/month</li>
+                <li>☁️ Cloud storage for models: $15/month</li>
             </ul>
 
-            <p>That's 156 hours I could have spent creating, engaging with my audience, or literally anything else. At even a modest $30 per hour valuation of my time, that's <span class="highlight">$4,680 in opportunity cost</span>. My GPU investment suddenly doesn't look so economical.</p>
+            <p>The math seemed reasonable. <strong>What I didn't calculate was TIME.</strong></p>
 
-            <h2>When Your Creative Tool Becomes Your Creative Block</h2>
+            <div class="callout">
+                <div class="callout-title">⏰ The Real Cost: 156 Hours in 6 Months</div>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li>⚙️ Initial setup: 14 hours</li>
+                    <li>📚 Learning custom nodes: 22 hours</li>
+                    <li>🔧 Troubleshooting broken updates: 47 hours (!)</li>
+                    <li>📦 Managing model downloads: 18 hours</li>
+                    <li>🐛 CUDA driver conflicts: 9 hours</li>
+                    <li>🔄 Reinstalling after crashes: 12 hours</li>
+                    <li>🛠️ Regular maintenance: 34 hours</li>
+                </ul>
+            </div>
 
-            <p>The worst part isn't the time. It's what that time represents. Every hour I spend fixing technical problems is an hour I'm not doing what I actually love. I started this journey because I was excited about AI-generated art and wanted to build a presence on Instagram and Twitter. I had creative ideas. I wanted to experiment.</p>
+            <p><span class="stat-highlight">$4,680</span> in opportunity cost at just $30/hour. My "economical" GPU investment suddenly looked very expensive.</p>
 
-            <p>Now I dread opening ComfyUI because I never know if today's the day another update breaks everything. There's a thread on Reddit with 73 upvotes where developers are venting about this exact problem. One person wrote, "I maintain two separate installations of Comfy because I'm terrified of updates destroying my workflows."</p>
+            <h2>😤 When Your Creative Tool Becomes Your Creative Block</h2>
 
-            <p>Think about that. We're so traumatized by breaking changes that we're running duplicate systems just to have a backup. This isn't creative freedom. This is tech Stockholm syndrome.</p>
+            <p>The worst part isn't the time. It's what that time represents.</p>
 
-            <h2>Character Consistency: The Promise That Never Delivered</h2>
+            <p>I started this journey because I was <em>excited</em> about AI art. I wanted to build an Instagram presence. I had creative ideas!</p>
 
-            <p>But let me tell you about the final straw. The thing that made me realize self-hosting wasn't just inconvenient but actually holding me back from my goals.</p>
+            <p>Now? I <strong>dread</strong> opening ComfyUI.</p>
 
-            <p>I've been trying to build an Instagram presence around a specific character. A virtual influencer concept I was really excited about. The whole point was visual consistency so followers could recognize my character across posts. Build connection. Build a brand.</p>
+            <div class="callout">
+                <div class="callout-title">💔 Reddit Reality Check</div>
+                <p style="margin: 0;"><em>"I maintain two separate installations of Comfy because I'm terrified of updates destroying my workflows."</em> - Real creator, 73 upvotes</p>
+            </div>
 
-            <p>After three months of learning LoRA training, tweaking parameters, and generating hundreds of test images, my character still looks different in every post. Sometimes the eyes are green, sometimes brown. The jawline shifts. Hair color drifts. One image she looks 25, the next image 35.</p>
+            <p>We're so traumatized by breaking changes that we're running <strong>duplicate systems</strong> just to have a backup. This isn't creative freedom. This is tech Stockholm syndrome.</p>
 
-            <p>I've spent entire weekends trying to nail character consistency. I've read documentation, watched tutorials, joined Discord communities. And I'm still getting wildly inconsistent results that kill any chance of building a recognizable brand on Instagram.</p>
+            <h2>🎭 Character Consistency: The Promise That Never Delivered</h2>
 
-            <p>Virtual influencers earning serious money (we're talking $10,000+ per month according to recent data) maintain flawless visual consistency. That's literally the foundation of their business model. And here I am, three months in, still unable to generate the same face twice.</p>
+            <p>Here's the final straw that broke me...</p>
 
-            <h2>The Algorithm Doesn't Care About Your Technical Struggles</h2>
+            <p>I spent <strong>3 months</strong> trying to build a consistent virtual influencer character for Instagram. The kind that earns $10K+/month because followers recognize the same face across hundreds of posts.</p>
 
-            <p>Meanwhile, Instagram's algorithm changed in May. Content that gets saved and shared now receives 3X more distribution. The platform is pushing original, high-quality content and punishing inconsistent posting.</p>
+            <div class="callout">
+                <div class="callout-title">❌ 3 Months of Failure</div>
+                <p style="margin: 0;">Despite learning LoRA training, tweaking parameters, generating hundreds of test images:</p>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>👁️ Eyes: green one day, brown the next</li>
+                    <li>🫱 Jawline: constantly shifting</li>
+                    <li>💇 Hair color: unpredictable</li>
+                    <li>🎂 Age: looks 25 in one image, 35 in the next</li>
+                </ul>
+            </div>
 
-            <p>My inconsistent character design isn't just a visual problem anymore. It's an algorithm problem. Instagram's AI analyzes my posts and sees low-quality, inconsistent content. My reach has dropped 60% since March.</p>
+            <p>Entire weekends gone. Documentation read. Discord communities joined. Still couldn't generate the same face twice.</p>
 
-            <p>So I'm stuck in this awful loop: I need to post consistently to grow. But creating consistent content requires technical skills I don't have. Learning those skills takes time away from posting. Not posting kills my growth. And around and around we go.</p>
+            <h2>📉 The Algorithm Doesn't Care About Your Technical Struggles</h2>
 
-            <h2>What Cloud Platforms Actually Solve</h2>
+            <p>Meanwhile, Instagram changed everything in May:</p>
 
-            <p>I resisted cloud AI platforms for months. I'd already invested in the GPU. I'd already spent all that time learning ComfyUI. Switching felt like admitting defeat.</p>
+            <div class="callout">
+                <div class="callout-title">🚨 My Reach Dropped 60%</div>
+                <p style="margin: 0;">Instagram's AI saw my inconsistent character as low-quality content. The algorithm doesn't care that I spent 3 months learning LoRA training. It just sees bad content and kills your reach.</p>
+            </div>
 
-            <p>But last week I tried a cloud platform's beta (won't name names because this isn't a sales pitch, just my experience). And within 15 minutes, I understood what I'd been missing.</p>
+            <p><strong>The awful loop:</strong> Need to post consistently → Can't create consistent content → Learning skills takes time from posting → Not posting kills growth → Repeat forever 🔄</p>
 
-            <p>The setup was instant. Literally just signed in and started generating. No Python installation, no CUDA drivers, no custom nodes to debug. Just... worked.</p>
+            <h2>☁️ What Cloud Platforms Actually Solve</h2>
 
-            <p>I uploaded 8 reference images of my character concept. The platform trained a custom model in about 12 minutes. Then I generated 50 images across different poses, outfits, and settings. Every single one looked like the same person. Consistent facial features, same eye color, recognizable styling.</p>
+            <p>I resisted cloud AI for months. I'd already invested in the GPU. Already spent all that time learning ComfyUI.</p>
 
-            <p>Fifty usable images in under an hour. Compare that to three months of fighting with local tools and getting nowhere.</p>
+            <p>But last week I tried a cloud platform's beta. <strong>Within 15 minutes, everything changed.</strong></p>
 
-            <p>The cost? Actually less than my monthly electricity bill for running my GPU. And I got back 12 hours per week that I'd been spending on maintenance.</p>
+            <div class="callout">
+                <div class="callout-title">✨ What Actually Happened</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>⚡ Setup: Instant (just signed in)</li>
+                    <li>🖼️ Uploaded 8 reference images</li>
+                    <li>⏱️ Model trained in 12 minutes</li>
+                    <li>🎨 Generated 50 consistent images (different poses, outfits, settings)</li>
+                    <li>✅ Every single one = same person, same features, same styling</li>
+                </ul>
+                <p style="margin: 10px 0 0 0;"><strong>50 usable images in under an hour.</strong> Compare that to 3 months of failure.</p>
+            </div>
 
-            <h2>The Real Comparison Nobody's Making</h2>
+            <p><span class="stat-highlight">💰 The cost?</span> Less than my monthly GPU electricity bill. Plus I got back 12 hours per week.</p>
 
-            <p>Everyone talks about cost per image. Cloud versus local. Subscription fees versus hardware investment. But nobody's talking about the real calculation.</p>
+            <h2>🤔 The Real Comparison Nobody's Making</h2>
 
-            <p>What's your time worth? What could you build if you had an extra 12 hours per week? How much further along would your Instagram presence be if you'd spent the last three months creating content instead of debugging software?</p>
+            <p>Everyone talks about cost per image. But nobody's asking the right questions:</p>
 
-            <p>These are the questions that matter. And for me, the answer was clear. Cloud platforms aren't more expensive when you factor in the true cost of self-hosting. They're dramatically cheaper in every way that actually matters.</p>
+            <div class="callout">
+                <div class="callout-title">💭 Questions That Actually Matter</div>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>What's your time worth?</li>
+                    <li>What could you build with an extra 12 hours/week?</li>
+                    <li>How much Instagram growth did you lose while debugging?</li>
+                </ul>
+            </div>
 
-            <h2>Making the Switch</h2>
+            <p><strong>My conclusion:</strong> Cloud platforms aren't more expensive. They're dramatically <em>cheaper</em> in every way that actually matters.</p>
+
+            <h2>🚀 Making the Switch</h2>
 
             <p>I'm not saying everyone should abandon self-hosting. If you're a developer who enjoys the technical challenge, or if you're generating 10,000+ images per month where the economics really do favor local hardware, then by all means keep at it.</p>
 
@@ -334,10 +394,10 @@
         </div>
 
         <div class="next-post">
-            <h3>Continue Reading</h3>
+            <h3>Continue Reading 📖</h3>
             <p><strong>The Real Cost of That Instagram Photoshoot (And Why I'll Never Book Another One)</strong></p>
-            <p>$1,847 for a single day photoshoot. 47 usable images. That's $39.30 per image. Here's why traditional content creation economics don't work anymore...</p>
-            <a href="/blog-photoshoot-economics.html">
+            <p>💸 $1,847 for ONE photoshoot. 47 images. That's $39.30 per image. At my posting frequency, I'd need $84K/year just for photography...</p>
+            <a href="/blog/photoshoot-economics">
                 Read Next <span>→</span>
             </a>
         </div>
