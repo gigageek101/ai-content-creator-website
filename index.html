@@ -27,18 +27,17 @@
         }
 
         :root {
-            --primary: #9333ea;
-            --primary-light: #a855f7;
-            --primary-dark: #7e22ce;
-            --accent: #ec4899;
-            --bg: #0f0f1e;
-            --bg-soft: #1a1a2e;
-            --bg-card: #16213e;
-            --text: #e2e8f0;
-            --text-secondary: #94a3b8;
-            --border: #334155;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 10px 40px rgba(147, 51, 234, 0.3);
+            --primary: #ff6b9d;
+            --primary-light: #ff8fb3;
+            --primary-dark: #e85589;
+            --accent: #4da7ff;
+            --bg: #f8f9fa;
+            --bg-soft: #fff;
+            --text: #2d3748;
+            --text-secondary: #718096;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         body {
@@ -59,8 +58,10 @@
         .hero {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 50%, #ffd4e8 100%);
             position: relative;
             overflow: hidden;
             padding: 80px 20px;
@@ -71,7 +72,7 @@
             position: absolute;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             top: -400px;
             right: -300px;
@@ -83,7 +84,7 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(77, 167, 255, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             bottom: -300px;
             left: -200px;
@@ -129,7 +130,7 @@
         }
 
         .highlight {
-            color: var(--primary-light);
+            color: var(--primary);
             font-weight: 700;
         }
 
@@ -139,14 +140,14 @@
             margin: 0 auto 40px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 60px rgba(147, 51, 234, 0.4);
+            box-shadow: 0 15px 60px rgba(255, 107, 157, 0.25);
             animation: fadeInUp 1s ease-out;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .hero-video-container:hover {
             transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 20px 70px rgba(147, 51, 234, 0.5);
+            box-shadow: 0 20px 70px rgba(255, 107, 157, 0.35);
         }
 
         @keyframes fadeInUp {
@@ -172,31 +173,27 @@
             align-items: center;
             gap: 12px;
             padding: 18px 36px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             border: none;
             border-radius: 50px;
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 8px 24px rgba(147, 51, 234, 0.4);
+            box-shadow: 0 8px 24px rgba(255, 107, 157, 0.3);
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(147, 51, 234, 0.6);
+            box-shadow: 0 12px 32px rgba(255, 107, 157, 0.4);
         }
 
-        /* Section Styles */
-        .section {
+        /* Features Section */
+        .features {
             padding: 100px 0;
             background: var(--bg-soft);
-        }
-
-        .section:nth-child(even) {
-            background: var(--bg);
         }
 
         .section-title {
@@ -222,7 +219,7 @@
         }
 
         .feature-card {
-            background: var(--bg-card);
+            background: white;
             padding: 40px;
             border-radius: 20px;
             box-shadow: var(--shadow);
@@ -263,6 +260,12 @@
             margin-bottom: 8px;
         }
 
+        /* Section */
+        .section {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
         /* Stats Grid */
         .stats-grid {
             display: grid;
@@ -272,7 +275,7 @@
         }
 
         .stat-card {
-            background: var(--bg-card);
+            background: white;
             padding: 30px;
             border-radius: 16px;
             text-align: center;
@@ -297,27 +300,22 @@
         /* Beta Signup */
         .beta-signup {
             padding: 100px 0;
-            background: var(--bg);
+            background: var(--bg-soft);
         }
 
         .signup-container {
             max-width: 700px;
             margin: 0 auto;
-            background: var(--bg-card);
+            background: white;
             padding: 60px;
             border-radius: 20px;
             box-shadow: var(--shadow-lg);
-            border: 2px solid var(--primary);
         }
 
         .signup-container h2 {
             font-size: 36px;
             margin-bottom: 16px;
             text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .signup-container .subtitle {
@@ -346,8 +344,6 @@
             font-size: 16px;
             transition: all 0.3s ease;
             font-family: inherit;
-            background: var(--bg);
-            color: var(--text);
         }
 
         .form-group input:focus,
@@ -355,7 +351,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.2);
+            box-shadow: 0 0 0 4px rgba(255, 107, 157, 0.1);
         }
 
         textarea {
@@ -384,7 +380,7 @@
         .submit-button {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -392,12 +388,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 24px rgba(147, 51, 234, 0.4);
+            box-shadow: 0 8px 24px rgba(255, 107, 157, 0.3);
         }
 
         .submit-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(147, 51, 234, 0.6);
+            box-shadow: 0 12px 32px rgba(255, 107, 157, 0.4);
         }
 
         .submit-button:disabled {
@@ -407,8 +403,8 @@
         }
 
         .success-message {
-            background: #10b981;
-            color: white;
+            background: #d4edda;
+            color: #155724;
             padding: 20px;
             border-radius: 12px;
             text-align: center;
@@ -417,11 +413,10 @@
 
         /* Footer */
         footer {
-            background: var(--bg-card);
-            color: var(--text-secondary);
+            background: #2d3748;
+            color: white;
             text-align: center;
             padding: 40px 20px;
-            border-top: 2px solid var(--border);
         }
 
         footer a {
@@ -453,7 +448,7 @@
                 font-size: 1.1rem;
             }
 
-            .section {
+            .features, .section, .beta-signup {
                 padding: 60px 0;
             }
 
