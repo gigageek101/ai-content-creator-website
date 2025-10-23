@@ -1,51 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://www.socialcontentgeneration.com/</loc>
     <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Blog Posts -->
+  <!-- Blog Post: ComfyUI Burnout -->
   <url>
-    <loc>https://yourdomain.com/blog/comfyui-burnout</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/comfyui-burnout</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Photoshoot Economics -->
   <url>
-    <loc>https://yourdomain.com/blog/photoshoot-economics</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/photoshoot-economics</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Character Consistency -->
   <url>
-    <loc>https://yourdomain.com/blog/character-consistency</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/character-consistency</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Creator Burnout -->
   <url>
-    <loc>https://yourdomain.com/blog/creator-burnout</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/creator-burnout</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Virtual Influencer Success -->
   <url>
-    <loc>https://yourdomain.com/blog/virtual-influencer</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/virtual-influencer</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Instagram Algorithm -->
   <url>
-    <loc>https://yourdomain.com/blog/instagram-algorithm</loc>
+    <loc>https://www.socialcontentgeneration.com/blog/instagram-algorithm</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
