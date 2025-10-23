@@ -1,4 +1,4 @@
-# robots.txt for Social Content Generation - Cloud AI Content Creator
+# robots.txt for https://www.socialcontentgeneration.com/
 
 User-agent: *
 Allow: /
@@ -6,13 +6,27 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.socialcontentgeneration.com/sitemap.xml
 
-# Crawl delay for aggressive bots
-User-agent: AhrefsBot
-Crawl-delay: 10
+# Crawl-delay (optional - adjust if needed)
+# Crawl-delay: 1
 
-User-agent: SemrushBot
-Crawl-delay: 10
+# Block access to API endpoints (if any)
+Disallow: /api/
 
-User-agent: MJ12bot
-Crawl-delay: 10
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /

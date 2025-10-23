@@ -3,61 +3,64 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage - Highest Priority -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Blog Post: ComfyUI Burnout -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/comfyui-burnout</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Post: Photoshoot Economics -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/photoshoot-economics</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Post: Character Consistency -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/character-consistency</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Post: Creator Burnout -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/creator-burnout</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Post: Virtual Influencer Success -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/virtual-influencer</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Post: Instagram Algorithm -->
-  <url>
-    <loc>https://www.socialcontentgeneration.com/blog/instagram-algorithm</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
 
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.socialcontentgeneration.com/</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Beta Signup Section -->
+    <url>
+        <loc>https://www.socialcontentgeneration.com/#beta-signup</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/comfyui-burnout</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/photoshoot-economics</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/character-consistency</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/creator-burnout</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/virtual-influencer</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.socialcontentgeneration.com/blog/instagram-algorithm</loc>
+        <lastmod>2025-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
