@@ -325,7 +325,7 @@
         }
 
         .signup-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
             padding: 60px;
@@ -342,6 +342,160 @@
         .signup-container .subtitle {
             text-align: center;
             margin-bottom: 40px;
+        }
+
+        /* Spots Counter */
+        .spots-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border: 2px solid #ff6b9d;
+            border-radius: 50px;
+            padding: 16px 32px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .red-dot {
+            width: 12px;
+            height: 12px;
+            background: #ff0000;
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        #spotsRemaining {
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        /* Beta Pricing Box */
+        .beta-pricing-box {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe8f5 100%);
+            border: 3px solid var(--primary);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .price {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .price-period {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .price-lock {
+            display: inline-block;
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .pricing-details {
+            margin-bottom: 30px;
+        }
+
+        .pricing-details h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--text);
+            text-align: center;
+        }
+
+        .pricing-details ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .pricing-details li {
+            padding: 12px 0;
+            font-size: 16px;
+            color: var(--text);
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+        }
+
+        .pricing-details li:last-child {
+            border-bottom: none;
+        }
+
+        .total-posts {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 18px;
+            color: var(--primary);
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(255, 107, 157, 0.2);
+        }
+
+        .beta-benefits {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .benefit-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .benefit-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
         }
 
         .form-group {
@@ -615,6 +769,54 @@
 
             .blog-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Beta Signup Mobile */
+            .spots-counter {
+                font-size: 16px;
+                padding: 12px 20px;
+                flex-wrap: wrap;
+            }
+
+            #spotsRemaining {
+                font-size: 20px;
+            }
+
+            .beta-pricing-box {
+                padding: 24px;
+            }
+
+            .price {
+                font-size: 42px;
+            }
+
+            .price-period {
+                font-size: 20px;
+            }
+
+            .pricing-details h3 {
+                font-size: 18px;
+            }
+
+            .pricing-details li {
+                font-size: 14px;
+            }
+
+            .total-posts {
+                font-size: 16px;
+                padding: 16px;
+            }
+
+            .beta-benefits {
+                padding: 20px;
+            }
+
+            .benefit-item {
+                gap: 12px;
+            }
+
+            .benefit-icon {
+                font-size: 24px;
             }
         }
     </style>
@@ -942,8 +1144,55 @@
     <section class="beta-signup" id="beta-signup" data-section="🚀 Join Beta Waitlist">
         <div class="container">
             <div class="signup-container">
+                <!-- Spots Counter -->
+                <div class="spots-counter">
+                    <div class="red-dot"></div>
+                    <span id="spotsRemaining">7</span> more spots left for beta test
+                </div>
+                
                 <h2>Join the Beta Waitlist: Limited Early Access</h2>
-                <p class="subtitle">The AI content revolution is here. Beta spots are filling fast. Former ComfyUI users who made the switch report 100+ hours saved monthly and 300% faster content production. Priority access goes to active Instagram/X creators with existing audiences, former ComfyUI users tired of self-hosting complexity, virtual influencer entrepreneurs, and content agencies.</p>
+                <p class="subtitle">The AI content revolution is here. <strong>Only 20 beta testers will be accepted.</strong> Former ComfyUI users who made the switch report 100+ hours saved monthly and 300% faster content production.</p>
+                
+                <div class="beta-pricing-box">
+                    <div class="pricing-header">
+                        <div class="price">$499<span class="price-period">/month</span></div>
+                        <div class="price-lock">🔒 Price Locked Forever</div>
+                    </div>
+                    <div class="pricing-details">
+                        <h3>Beta Access Includes:</h3>
+                        <ul>
+                            <li><strong>1,950 Credits Monthly</strong> = 1,950 AI Creations</li>
+                            <li>✅ <strong>20 Twitter/X Posts Daily</strong> (600/month)</li>
+                            <li>✅ <strong>20 Threads Posts Daily</strong> (600/month)</li>
+                            <li>✅ <strong>5 Instagram Carousel Posts Daily</strong> (150/month)</li>
+                            <li>✅ <strong>5 TikTok 3x5 Slide Slideshows Daily</strong> (450 images/month)</li>
+                            <li>✅ <strong>5 Facebook Posts Daily</strong> (150/month)</li>
+                        </ul>
+                        <div class="total-posts">
+                            <strong>= 65 Posts Per Day = 1,950 Posts Per Month</strong>
+                        </div>
+                    </div>
+                    <div class="beta-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔥</span>
+                            <strong>Lifetime Price Lock:</strong> Your rate stays $499/month forever, even when prices increase for new users
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">👥</span>
+                            <strong>Exclusive Community Access:</strong> Join our private strategy community where beta members exchange proven tactics and workflows
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🚀</span>
+                            <strong>First Access:</strong> Beta testers get every new feature before anyone else
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💎</span>
+                            <strong>Quality Barrier:</strong> The $499+ entry point ensures serious creators only—no time-wasters or noise like typical OF marketing groups
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="subtitle">Priority access goes to active Instagram/X creators with existing audiences, former ComfyUI users tired of self-hosting complexity, virtual influencer entrepreneurs, and content agencies.</p>
                 
                 <form id="betaForm">
                     <div class="form-group">
@@ -1037,6 +1286,35 @@
     </footer>
 
     <script>
+        // Spots Counter Logic - Decreases on repeat visits
+        function initSpotsCounter() {
+            const spotsElement = document.getElementById('spotsRemaining');
+            const storageKey = 'betaSpotsViewed';
+            
+            // Get current view count from localStorage
+            let viewCount = parseInt(localStorage.getItem(storageKey) || '0');
+            
+            // Calculate remaining spots (starts at 7, decreases by 1 per visit, minimum 1)
+            let spotsRemaining = Math.max(7 - viewCount, 1);
+            
+            // Update display
+            spotsElement.textContent = spotsRemaining;
+            
+            // Increment view count for next visit
+            localStorage.setItem(storageKey, (viewCount + 1).toString());
+            
+            // Add urgency color changes
+            if (spotsRemaining <= 3) {
+                document.querySelector('.spots-counter').style.borderColor = '#ff0000';
+                document.querySelector('.spots-counter').style.background = 'linear-gradient(135deg, #ffe5e5 0%, #ffcccc 100%)';
+            } else if (spotsRemaining <= 5) {
+                document.querySelector('.spots-counter').style.borderColor = '#ff8800';
+            }
+        }
+        
+        // Initialize counter on page load
+        initSpotsCounter();
+
         document.getElementById('betaForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
