@@ -7,58 +7,50 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.socialcontentgeneration.com/</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
-
-    <!-- Beta Signup Section -->
-    <url>
-        <loc>https://www.socialcontentgeneration.com/#beta-signup</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
     <!-- Blog Posts -->
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/comfyui-burnout</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/photoshoot-economics</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/character-consistency</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/creator-burnout</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/virtual-influencer</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.socialcontentgeneration.com/blog/instagram-algorithm</loc>
-        <lastmod>2025-10-23</lastmod>
+        <lastmod>2025-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
